@@ -21,6 +21,8 @@ public class AboutYou extends GridPane {
     public AboutYou() {
         Font font = new Font(12);
 
+
+        //labels
         Label nameLabel = new Label("Name:");
         nameLabel.setFont(font);
         GridPane.setHalignment(nameLabel, HPos.RIGHT);
@@ -37,7 +39,7 @@ public class AboutYou extends GridPane {
         favHobbyLabel.setFont(font);
         GridPane.setHalignment(favHobbyLabel, HPos.RIGHT);
 
-
+        //text fields
         nameInput = new TextField();
         nameInput.setFont(font);
         nameInput.setPrefWidth(100);
@@ -58,12 +60,15 @@ public class AboutYou extends GridPane {
         hobbyInput.setPrefWidth(100);
         hobbyInput.setAlignment(Pos.CENTER);
 
+        //button
         Button print = new Button("Print");
         print.setFont(font);
         print.setPrefWidth(70);
         print.setAlignment(Pos.CENTER);
         print.setOnAction(this::processReturn);
 
+
+        //making screen pretty
         setAlignment(Pos.CENTER);
         setHgap(20);
         setVgap(10);
@@ -81,6 +86,7 @@ public class AboutYou extends GridPane {
         add(result, 1, 4);
     }
 
+    //string
     private void processReturn(ActionEvent event) {
         String name = nameInput.getText();
         String age = ageInput.getText();
